@@ -1,0 +1,120 @@
+﻿Starting a Gradle Daemon, 2 busy and 7 stopped Daemons could not be reused, use --status for details
+> Task :app:clean
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkDebugAarMetadata
+> Task :app:processDebugNavigationResources
+> Task :app:generateDebugResValues
+> Task :app:compileDebugNavigationResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:mergeDebugResources
+> Task :app:parseDebugLocalResources
+
+> Task :app:processDebugMainManifest
+package="com.example.playmusic" found in source AndroidManifest.xml: C:\Users\jayes\OneDrive\Desktop\PlayMusic\app\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.example.playmusic" from the source AndroidManifest.xml: C:\Users\jayes\OneDrive\Desktop\PlayMusic\app\src\main\AndroidManifest.xml.
+
+> Task :app:processDebugManifest
+> Task :app:javaPreCompileDebug
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :app:desugarDebugFileDependencies
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:checkDebugDuplicateClasses
+> Task :app:validateSigningDebug
+> Task :app:processDebugManifestForPackage
+> Task :app:mergeExtDexDebug
+
+The Daemon will expire immediately since the JVM garbage collector is thrashing.
+The project memory settings are likely not configured or are configured to an insufficient value.
+The memory settings for this project must be adjusted to avoid this failure.
+These settings can be adjusted by setting 'org.gradle.jvmargs' in 'gradle.properties'.
+The currently configured max heap space is '512 MiB' and the configured max metaspace is '384 MiB'.
+For more information on how to set these values, please refer to https://docs.gradle.org/9.0-milestone-1/userguide/build_environment.html#sec:configuring_jvm_memory in the Gradle documentation.
+To disable this warning, set 'org.gradle.daemon.performance.disable-logging=true'.
+./gradlew : The message received from the daemon indicates that the daemon has disappeared.
+At line:1 char:50
++ ... am Files\Java\jdk-21'; ./gradlew clean app:assembleDebug 2>&1 | Out-F ...
++                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (The message rec...as disappeared.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Build request sent: Build{id=9f2585b1-b454-4b49-8007-2979e5ce74dd, currentDir=C:\Users\jayes\OneDrive\Desktop\PlayMusic}
+Attempting to read last messages from the daemon log...
+Daemon pid: 4988
+  log file: C:\Users\jayes\.gradle\daemon\9.0-milestone-1\daemon-4988.out.log
+----- Last 20 lines from daemon log file - daemon-4988.out.log -----
+2025-11-30T00:29:14.215+0530 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping 
+until state changes.
+2025-11-30T00:29:14.219+0530 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to 
+start building Build{id=9f2585b1-b454-4b49-8007-2979e5ce74dd, currentDir=C:\Users\jayes\OneDrive\Desktop\PlayMusic}. 
+Dispatching build started information...
+2025-11-30T00:29:14.221+0530 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 35: 
+dispatching org.gradle.launcher.daemon.protocol.BuildStarted@68ca787a
+2025-11-30T00:29:14.243+0530 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env 
+variables: [USERDOMAIN_ROAMINGPROFILE, NVM_SYMLINK, PROCESSOR_LEVEL, EFC_12280_3789132940, RegionCode, SESSIONNAME, 
+ALLUSERSPROFILE, PROCESSOR_ARCHITECTURE, AMDRMSDKPATH, VSCODE_PYTHON_AUTOACTIVATE_GUARD, VSCODE_GIT_IPC_HANDLE, 
+PSModulePath, SystemDrive, VSCODE_INJECTION, COLORTERM, DIRNAME, USERNAME, VSCODE_GIT_ASKPASS_NODE, TERM_PROGRAM_VERSION, 
+ProgramFiles(x86), GIT_ASKPASS, CHROME_CRASHPAD_PIPE_NAME, APP_HOME, DEFAULT_JVM_OPTS, PATHEXT, DriverData, PAGER, 
+EFC_12280_1262719628, platformcode, PyCharm Community Edition, ORIGINAL_XDG_CURRENT_DESKTOP, ProgramData, ProgramW6432, 
+HOMEPATH, PROCESSOR_IDENTIFIER, EFC_12280_1592913036, ProgramFiles, PUBLIC, windir, MSMPI_BENCHMARKS, LOCALAPPDATA, 
+ChocolateyLastPathUpdate, MSMPI_BIN, USERDOMAIN, EFC_12280_2775293581, LOGONSERVER, EFC_12280_2283032206, JAVA_HOME, 
+PROMPT, LANG, VSCODE_GIT_ASKPASS_MAIN, OneDrive, =C:, APPDATA, VBOX_HWVIRTEX_IGNORE_SVM_IN_USE, JAVA_EXE, 
+VSCODE_GIT_ASKPASS_EXTRA_ARGS, ChocolateyInstall, CommonProgramFiles, Path, ANTIGRAVITY_CLI_ALIAS, PyCharm, OS, 
+TERM_PROGRAM, COMPUTERNAME, OnlineServices, NVM_HOME, PROCESSOR_REVISION, CLASSPATH, CommonProgramW6432, ComSpec, 
+APP_BASE_NAME, SystemRoot, TEMP, HOMEDRIVE, USERPROFILE, TMP, CommonProgramFiles(x86), NUMBER_OF_PROCESSORS, 
+ANTIGRAVITY_AGENT]
+2025-11-30T00:29:14.277+0530 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs 
+to the client via the connection.
+2025-11-30T00:29:14.278+0530 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all 
+logging from the daemon (pid: 4988). The daemon log file: C:\Users\jayes\.gradle\daemon\9.0-milestone-1\daemon-4988.out.log
+2025-11-30T00:29:14.310+0530 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting build in new daemon 
+[memory: 512 MiB]
+2025-11-30T00:29:14.330+0530 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing 
+the build.
+2025-11-30T00:29:14.331+0530 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon 
+context: DefaultDaemonContext[uid=0bad6216-6228-4563-bed6-52f2f4616359,javaHome=C:\Program 
+Files\Java\jdk-21,javaVersion=21,javaVendor=Oracle Corporation,daemonRegistryDir=C:\Users\jayes\.gradle\daemon,pid=4988,idle
+Timeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-XX:MaxMetaspaceSize=3
+84m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.vari
+ant]
+package="com.example.playmusic" found in source AndroidManifest.xml: 
+C:\Users\jayes\OneDrive\Desktop\PlayMusic\app\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is 
+ignored.
+Recommendation: remove package="com.example.playmusic" from the source AndroidManifest.xml: 
+C:\Users\jayes\OneDrive\Desktop\PlayMusic\app\src\main\AndroidManifest.xml.
+The Daemon will expire immediately since the JVM garbage collector is thrashing.
+The project memory settings are likely not configured or are configured to an insufficient value.
+The memory settings for this project must be adjusted to avoid this failure.
+These settings can be adjusted by setting 'org.gradle.jvmargs' in 'gradle.properties'.
+The currently configured max heap space is '512 MiB' and the configured max metaspace is '384 MiB'.
+For more information on how to set these values, please refer to 
+https://docs.gradle.org/9.0-milestone-1/userguide/build_environment.html#sec:configuring_jvm_memory in the Gradle 
+documentation.
+To disable this warning, set 'org.gradle.daemon.performance.disable-logging=true'.
+Problem in daemon expiration check----- End of the daemon log -----
+
+JVM crash log found: file:///C:/Users/jayes/OneDrive/Desktop/PlayMusic/hs_err_pid4988.log
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Gradle build daemon disappeared unexpectedly (it may have been killed or may have crashed)
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
