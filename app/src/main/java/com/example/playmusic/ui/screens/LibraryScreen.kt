@@ -20,6 +20,8 @@ import com.example.playmusic.ui.components.SongItem
 import com.example.playmusic.viewmodel.MusicViewModel
 import com.example.playmusic.navigation.Screens
 import com.example.playmusic.ui.theme.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 
 @Composable
 fun LibraryScreen(navController: NavController, musicViewModel: MusicViewModel) {
@@ -30,14 +32,26 @@ fun LibraryScreen(navController: NavController, musicViewModel: MusicViewModel) 
                 modifier = Modifier
                     .fillMaxWidth()
                     .background(WheelGray) // Header bar background
-                    .padding(vertical = 12.dp),
-                contentAlignment = Alignment.Center
+                    .padding(vertical = 12.dp)
             ) {
+                // Back Button
+                androidx.compose.material3.IconButton(
+                    onClick = { navController.popBackStack() },
+                    modifier = Modifier.align(Alignment.CenterStart)
+                ) {
+                    androidx.compose.material3.Icon(
+                        imageVector = Icons.Filled.ArrowBack,
+                        contentDescription = "Back",
+                        tint = TextWhite
+                    )
+                }
+
                 Text(
                     text = "Music",
                     color = TextWhite,
                     fontSize = 18.sp,
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.align(Alignment.Center)
                 )
             }
         }
@@ -64,7 +78,7 @@ fun LibraryScreen(navController: NavController, musicViewModel: MusicViewModel) 
                     items(songs.value!!) { song ->
                         SongItem(song = song, onClick = {
                             musicViewModel.playSong(song)
-                            navController.navigate(Screens.Player)
+                            navController.popBackStack()
                         })
                     }
                 }

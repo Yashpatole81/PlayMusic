@@ -23,7 +23,7 @@ object Screens {
 @Composable
 fun AppNavHost(
     musicViewModel: MusicViewModel,
-    startDestination: String = Screens.Library
+    startDestination: String = Screens.Player
 ) {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = startDestination) {

@@ -162,7 +162,7 @@ fun PlayerScreen(navController: NavController, musicViewModel: MusicViewModel) {
             ) {
                 ClickWheel(
                     isPlaying = isPlaying,
-                    onMenuClick = { navController.popBackStack() },
+                    onMenuClick = { navController.navigate(com.example.playmusic.navigation.Screens.Library) },
                     onPlayPauseClick = { musicViewModel.togglePlayPause() },
                     onNextClick = { musicViewModel.playNext() },
                     onPrevClick = { musicViewModel.playPrevious() },
