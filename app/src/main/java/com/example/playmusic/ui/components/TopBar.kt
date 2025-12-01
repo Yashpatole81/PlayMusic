@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.text.style.TextAlign
 import com.example.playmusic.ui.theme.White
+import com.example.playmusic.ui.theme.TextWhite
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 
@@ -25,11 +26,11 @@ fun TopBar(title: String) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         IconButton(onClick = { /* TODO: open drawer */ }) {
-            Icon(imageVector = Icons.Filled.Menu, contentDescription = "Menu", tint = White)
+            Icon(imageVector = Icons.Filled.Menu, contentDescription = "Menu", tint = TextWhite)
         }
         Text(
             text = title,
-            color = White,
+            color = TextWhite,
             modifier = Modifier.weight(1f),
             textAlign = TextAlign.Center
         )

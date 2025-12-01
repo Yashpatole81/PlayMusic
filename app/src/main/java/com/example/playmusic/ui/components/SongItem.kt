@@ -2,42 +2,57 @@ package com.example.playmusic.ui.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.background
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.example.playmusic.ui.theme.White
-import com.example.playmusic.ui.theme.Black
+import androidx.compose.ui.unit.sp
+import com.example.playmusic.ui.theme.*
 import com.example.playmusic.data.model.Song
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.PlayArrow
 
 @Composable
 fun SongItem(song: Song, onClick: () -> Unit, isSelected: Boolean = false) {
-    Row(
+    Column(
         modifier = Modifier
             .fillMaxWidth()
             .clickable { onClick() }
-            .padding(horizontal = 16.dp, vertical = 12.dp)
-            .background(if (isSelected) White.copy(alpha = 0.1f) else Color.Transparent),
-        verticalAlignment = Alignment.CenterVertically
+            .padding(horizontal = 16.dp)
     ) {
-        Column(modifier = Modifier.weight(1f)) {
-            Text(text = song.title, color = White)
-            Text(text = song.artist, color = White.copy(alpha = 0.7f), style = androidx.compose.material3.MaterialTheme.typography.bodySmall)
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 12.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = song.title,
+                    color = TextWhite,
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Bold,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    text = song.artist,
+                    color = TextGray,
+                    fontSize = 14.sp,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+            }
+            
+            if (isSelected) {
+                // Optional: Show a small "Now Playing" indicator (e.g., speaker icon or EQ)
+                Text("▶", color = AccentBlue, fontSize = 12.sp)
+            }
         }
-        IconButton(onClick = onClick) {
-            Icon(
-                imageVector = Icons.Filled.PlayArrow,
-                contentDescription = "Play",
-                tint = White,
-                modifier = Modifier.size(24.dp)
-            )
-        }
+        HorizontalDivider(color = WheelGray, thickness = 0.5.dp)
     }
 }
